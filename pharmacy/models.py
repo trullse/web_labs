@@ -101,6 +101,7 @@ class Employee(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
+    pub_date = models.DateTimeField("Publish date", default=datetime(2023, 9, 1, 12, 0))
     content = models.TextField()
     img_source = models.ImageField(upload_to='static/pharmacy/images/articles')
 

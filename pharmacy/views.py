@@ -175,7 +175,7 @@ class StatisticsView(PermissionRequiredMixin, generic.ListView):
         """
         return Sale.objects.order_by("-date")
     
-    
+
 class NewsIndexView(generic.ListView):
     template_name = "pharmacy/news_index.html"
     context_object_name = "news_list"
@@ -184,7 +184,7 @@ class NewsIndexView(generic.ListView):
         """
         Return the news
         """
-        return Article.objects.order_by("-title")
+        return Article.objects.order_by("-pub_date")
 
     def get(self, request, *args, **kwargs):
         logger.info('In news index view')

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    {% block title %}<title>Pharmacy</title>{% endblock %}
+    <title>{% block title %}Pharmacy{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,6 +15,7 @@
         <header>
             <nav>
                 <a href="{% url 'pharmacy:index' %}">Home</a>&nbsp;|&nbsp;
+                <a href="{% url 'pharmacy:news_index' %}">News</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:category_index' %}">Categories</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:medicine_index' %}">Medicines</a>&nbsp;|&nbsp;
                 {% if perms.pharmacy.view_supplier %}
