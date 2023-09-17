@@ -1,5 +1,7 @@
 import logging
 from datetime import datetime
+from typing import Any
+from django.db import models
 import requests
 
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
@@ -15,34 +17,18 @@ from .helpers import plot_last_days_sales
 logger = logging.getLogger('main')
 
 
-class IndexView(generic.DetailView):
+class IndexView(generic.TemplateView):
     logger.warning('in index view')
     template_name = "pharmacy/index.html"
-    joke_info = {}
-    model = joke_info
 
     def get(self, request, *args, **kwargs):
         logger.info('In index view')
-
-        url = 'https://official-joke-api.appspot.com/jokes/programming/random'
-        joke_info = requests.get(url).json()
-        self.joke_info = joke_info
-        logger.debug(joke_info)
-        context = get_ip_request()
-        logger.debug(f'context: {context}')
-
-        return render(request, self.template_name, context)
-
-
-def get_ip_request():
-    logger.info('connecting to the joke API')
-    url = 'https://official-joke-api.appspot.com/jokes/programming/random'
-    ip_request = requests.get(url).json()
-    ip_request = ip_request[0]
-    setup = ip_request['setup']
-    punchline = ip_request['punchline']
-    logger.debug(ip_request)
-    return {'setup': setup, 'punchline': punchline}
+        return super().get(request, *args, **kwargs)
+    
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        context['last_article'] = Article.objects.order_by('-pub_date').first()
+        return context
 
 
 class CategoriesIndexView(generic.ListView):
@@ -189,3 +175,33 @@ class NewsIndexView(generic.ListView):
     def get(self, request, *args, **kwargs):
         logger.info('In news index view')
         return super().get(request, *args, **kwargs)
+    
+    
+class AdditionalView(generic.DetailView):
+    template_name = "pharmacy/additional.html"
+    context_object_name = "additional"
+    joke_info = {}
+    model = joke_info
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In additional view')
+
+        url = 'https://official-joke-api.appspot.com/jokes/programming/random'
+        joke_info = requests.get(url).json()
+        self.joke_info = joke_info
+        logger.debug(joke_info)
+        context = get_ip_request()
+        logger.debug(f'context: {context}')
+
+        return render(request, self.template_name, context)
+
+
+def get_ip_request():
+    logger.info('connecting to the joke API')
+    url = 'https://official-joke-api.appspot.com/jokes/programming/random'
+    ip_request = requests.get(url).json()
+    ip_request = ip_request[0]
+    setup = ip_request['setup']
+    punchline = ip_request['punchline']
+    logger.debug(ip_request)
+    return {'setup': setup, 'punchline': punchline}

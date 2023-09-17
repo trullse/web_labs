@@ -107,5 +107,11 @@ class Article(models.Model):
 
     def __str__(self) -> str:
         return self.title
+    
+    def get_brief(self):
+        brief = self.content[:150]
+        if len(self.content) > 150:
+            return f'{brief}...'
+        return brief
 
 # logger = logging.getLogger(__name__)
