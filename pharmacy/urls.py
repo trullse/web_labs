@@ -25,5 +25,7 @@ urlpatterns = [
     # ex: /pharmacy/suppliers/2/
     path("suppliers/<int:pk>/", views.SuppliersDetailView.as_view(), name="supplier_detail"),
     # ex: /pharmacy/statistics/
-    path("statistics/", views.StatisticsView.as_view(), name="statistics")
+    path("statistics/", views.StatisticsView.as_view(), name="statistics"),
+    # ex: /pharmacy/news/
+    path("news/", views.NewsIndexView.as_view(), name="news_index")
 ]

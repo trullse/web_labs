@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
-from .models import MedicineCategory, Medicine, Supplier, Sale
+from .models import MedicineCategory, Medicine, Supplier, Sale, Article
 from .helpers import plot_last_days_sales
 
 
@@ -174,3 +174,18 @@ class StatisticsView(PermissionRequiredMixin, generic.ListView):
         Return the sales
         """
         return Sale.objects.order_by("-date")
+    
+    
+class NewsIndexView(generic.ListView):
+    template_name = "pharmacy/news_index.html"
+    context_object_name = "news_list"
+
+    def get_queryset(self):
+        """
+        Return the news
+        """
+        return Article.objects.order_by("-title")
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In news index view')
+        return super().get(request, *args, **kwargs)
