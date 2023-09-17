@@ -176,6 +176,15 @@ class NewsIndexView(generic.ListView):
         logger.info('In news index view')
         return super().get(request, *args, **kwargs)
     
+
+class NewsDetailView(generic.DetailView):
+    model = Article
+    template_name = "pharmacy/news_detail.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In news detail view')
+        return super().get(request, *args, **kwargs)
+    
     
 class AdditionalView(generic.DetailView):
     template_name = "pharmacy/additional.html"
