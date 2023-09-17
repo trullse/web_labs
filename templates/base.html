@@ -27,6 +27,7 @@
                 {% if perms.pharmacy.view_sale %}
                 <a href="{% url 'pharmacy:statistics' %}">Statistics</a>&nbsp;|&nbsp;
                 {% endif %}
+                <a href="{% url 'pharmacy:additional' %}">Additional</a>&nbsp;|&nbsp;
                 {% if user.is_authenticated %}
                 Welcome, {{ user.get_username }} &nbsp;&nbsp;&nbsp;
                 <a href="{% url 'logout'%}?next={{request.path}}">Logout</a>
