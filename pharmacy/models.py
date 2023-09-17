@@ -61,7 +61,7 @@ class PharmacyDepartment(models.Model):
 
 
 class Sale(models.Model):
-    date = models.DateTimeField("Date sold", default=datetime.now())
+    date = models.DateTimeField("Date sold")
     ph_department = models.ForeignKey(PharmacyDepartment, on_delete=models.CASCADE)
     medicines = models.ManyToManyField(Medicine)
 
@@ -84,7 +84,7 @@ class Sale(models.Model):
 class Employee(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     department = models.ForeignKey(PharmacyDepartment, on_delete=models.CASCADE)
-    date_of_birth = models.DateTimeField("Date of Birth", default=datetime.now() - relativedelta(years=18))
+    date_of_birth = models.DateTimeField("Date of Birth")
 
     def __str__(self):
         return f'{self.user.__str__()} in {self.department}'
