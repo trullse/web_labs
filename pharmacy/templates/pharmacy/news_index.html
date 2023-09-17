@@ -5,9 +5,11 @@
 {% if news_list %}
 <ul>
     {% for article in news_list %}
-    <h2>{{ article.title }}</h2>
-    <img src="{{ article.img_source.url }}" height="400">
-    <div>{{ article.content }}</div>
+    <figure>
+        <h2>{{ article.title }}</h2>
+        <img src="{{ article.img_source.url }}" height="400">
+        <div>{{ article.get_brief }} <a href="#">Continue reading</a></div>
+    </figure>
     {% endfor %}
 </ul>
 {% else %}
