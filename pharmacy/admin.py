@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
-from .models import Medicine, Supplier, PharmacyDepartment, MedicineCategory, Sale, Employee
+from .models import Medicine, Supplier, PharmacyDepartment, MedicineCategory, Sale, Employee, Article
 
 
 class EmployeeInline(admin.TabularInline):
@@ -69,3 +69,4 @@ admin.site.register(Supplier, SupplierAdmin)
 admin.site.register(PharmacyDepartment, PharmacyDepartmentsAdmin)
 admin.site.register(MedicineCategory, MedicineCategoryAdmin)
 admin.site.register(Sale, SaleAdmin)
+admin.site.register(Article)

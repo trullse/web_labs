@@ -104,4 +104,7 @@ class Article(models.Model):
     content = models.TextField()
     img_source = models.ImageField(upload_to='images/articles')
 
+    def __str__(self) -> str:
+        return self.title
+
 # logger = logging.getLogger(__name__)
