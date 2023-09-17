@@ -32,8 +32,6 @@ def plot_last_days_sales():
             medicine_name = medicine.name
             medicine_count[medicine_name] = medicine_count.get(medicine_name, 0) + 1
 
-    most_popular_medicine = max(medicine_count, key=medicine_count.get)
-
     # Prepare the data for plotting
     dates = [sale['sale_date'] for sale in daily_sales]
     logger.debug(f'{len(dates)}')
