@@ -154,3 +154,9 @@ LOGGING = {
         },
     },
 }
+
+# Base url to serve media files
+MEDIA_URL = ''
+
+# Path where media is stored'
+MEDIA_ROOT = BASE_DIR / 'pharmacy/'

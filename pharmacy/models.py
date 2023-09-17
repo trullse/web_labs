@@ -102,7 +102,7 @@ class Employee(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    img_source = models.ImageField(upload_to='images/articles')
+    img_source = models.ImageField(upload_to='static/pharmacy/images/articles')
 
     def __str__(self) -> str:
         return self.title
