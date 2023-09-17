@@ -98,4 +98,10 @@ class Employee(models.Model):
             logger.error('Can\'t convert input into date')
             raise ValidationError('Date is incorrect')
 
+
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    img_source = models.ImageField(upload_to='images/articles')
+
 # logger = logging.getLogger(__name__)
