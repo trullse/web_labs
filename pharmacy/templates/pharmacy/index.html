@@ -5,6 +5,18 @@
 {% block content %}
 <h1>Pharmacy homepage</h1>
 
+<a href="https://sinupret.com/">
+    <figure>
+        {% load static %}
+        <img src="{% static 'pharmacy/images/ad/ad_wide.jpg' %}" alt="Advertisement" width="1000"
+            
+            srcset="{% static 'pharmacy/images/ad/ad_wide.jpg' %} 1920w,
+                    {% static 'pharmacy/images/ad/ad_short.jpg' %} 1200w"
+        >
+        <figcaption>Advertisement</figcaption>
+    </figure>
+</a>
+
 <h2>Latest article:</h2>
 <figure>
     <h2>{{ last_article.title }}</h2>
