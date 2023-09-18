@@ -3,7 +3,34 @@
 {% block title %}About{% endblock %}
 
 {% block content %}
-<h1>About company</h1>
-
+{% load static %}
+<video height="480" 
+       src="{% static 'pharmacy/videos/HealthHub_video.mp4' %}"
+       autoplay controls preload="none" muted>
+  Video cannot be displayed
+</video>
+<p>
+    Welcome to HealthHub, your trusted source for all your healthcare needs. We are dedicated to 
+    providing the highest quality pharmaceutical services, health products, and professional guidance 
+    to our valued customers.
+</p>
+<h2>Our Commitment to Health</h2>
+<p>
+    At HealthHub, our mission is simple yet profound: to promote and enhance the health and well-being of 
+    our community. We understand that good health is the foundation of a fulfilling life, and we are here 
+    to support you every step of the way.
+</p>
+<h2>Experienced Professionals</h2>
+<p>
+    Our team of experienced pharmacists and healthcare experts is at the heart of what we do. With a deep 
+    commitment to your health and a wealth of knowledge in medications and healthcare trends, our team is here 
+    to offer you personalized advice and guidance.
+</p>
+<h2>Quality Products</h2>
+<p>
+    We take pride in offering a wide selection of high-quality prescription and over-the-counter medications, 
+    vitamins, supplements, and health products. Your health is our priority, and we ensure that every product 
+    on our shelves meets stringent quality standards.
+</p>
 
 {% endblock %}
