@@ -214,3 +214,12 @@ def get_ip_request():
     punchline = ip_request['punchline']
     logger.debug(ip_request)
     return {'setup': setup, 'punchline': punchline}
+
+
+class AboutView(generic.TemplateView):
+    template_name = "pharmacy/about.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In about view')
+        return super().get(request, *args, **kwargs)
+    
