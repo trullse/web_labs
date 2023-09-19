@@ -7,7 +7,7 @@
     {% for article in news_list %}
     <figure>
         <h1>{{ article.title }}</h1>
-        <img src="{{ article.img_source.url }}" height="400">
+        <img src="{{ article.img_source.url }}" height="400" alt="{{ article.title }}">
         <div>{{ article.get_brief }} <a href="{% url 'pharmacy:news_detail' article.id %}">Continue reading</a></div>
     </figure>
     {% endfor %}
