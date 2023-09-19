@@ -59,3 +59,11 @@ class AboutView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         logger.info('In about view')
         return super().get(request, *args, **kwargs)
+    
+
+class FAQView(generic.TemplateView):
+    template_name = "faq.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In faq view')
+        return super().get(request, *args, **kwargs)

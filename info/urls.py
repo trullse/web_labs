@@ -8,5 +8,7 @@ urlpatterns = [
     # ex: /additional
     path("additional/", views.AdditionalView.as_view(), name="additional"),
     # ex: /about
-    path("about/", views.AboutView.as_view(), name="about")
+    path("about/", views.AboutView.as_view(), name="about"),
+    # ex: /faq
+    path("faq/", views.FAQView.as_view(), name="faq"),
 ]

@@ -28,6 +28,7 @@
                 <a href="{% url 'pharmacy:statistics' %}">Statistics</a>&nbsp;|&nbsp;
                 {% endif %}
                 <a href="{% url 'info:about' %}">About</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:faq' %}">FAQ</a>&nbsp;|&nbsp;
                 <a href="{% url 'info:additional' %}">Additional</a>&nbsp;|&nbsp;
                 {% if user.is_authenticated %}
                 Welcome, {{ user.get_username }} &nbsp;&nbsp;&nbsp;
