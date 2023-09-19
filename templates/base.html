@@ -6,17 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Добавление дополнительного статического CSS файла -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'pharmacy/css/styles.css' %}">
 </head>
 
     <body>
         <header>
             <nav>
                 {% load static %}
-                <a href="{% url 'pharmacy:index' %}">
-                    <img src="{% static 'pharmacy/images/HealthHub.png' %}" alt="HealthHub logo" height="50">
+                <a href="{% url 'info:index' %}">
+                    <img src="{% static 'images/HealthHub.png' %}" alt="HealthHub logo" height="50">
                 </a>&nbsp;&nbsp;&nbsp;
                 <a href="{% url 'news:news_index' %}">News</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:category_index' %}">Categories</a>&nbsp;|&nbsp;
@@ -30,8 +27,8 @@
                 {% if perms.pharmacy.view_sale %}
                 <a href="{% url 'pharmacy:statistics' %}">Statistics</a>&nbsp;|&nbsp;
                 {% endif %}
-                <a href="{% url 'pharmacy:about' %}">About</a>&nbsp;|&nbsp;
-                <a href="{% url 'pharmacy:additional' %}">Additional</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:about' %}">About</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:additional' %}">Additional</a>&nbsp;|&nbsp;
                 {% if user.is_authenticated %}
                 Welcome, {{ user.get_username }} &nbsp;&nbsp;&nbsp;
                 <a href="{% url 'logout'%}?next={{request.path}}">Logout</a>

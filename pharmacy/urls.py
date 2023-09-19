@@ -4,8 +4,6 @@ from . import views
 
 app_name = "pharmacy"
 urlpatterns = [
-    # ex: /pharmacy/
-    path("", views.IndexView.as_view(), name="index"),
     # ex: /pharmacy/categories/
     path("categories/", views.CategoriesIndexView.as_view(), name="category_index"),
     # ex: /pharmacy/categories/5/
@@ -26,8 +24,4 @@ urlpatterns = [
     path("suppliers/<int:pk>/", views.SuppliersDetailView.as_view(), name="supplier_detail"),
     # ex: /pharmacy/statistics/
     path("statistics/", views.StatisticsView.as_view(), name="statistics"),
-    # ex: /pharmacy/additional
-    path("additional/", views.AdditionalView.as_view(), name="additional"),
-    # ex: /pharmacy/about
-    path("about/", views.AboutView.as_view(), name="about")
 ]
