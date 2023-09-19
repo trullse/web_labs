@@ -10,7 +10,8 @@ from django.http import HttpResponse
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
-from .models import MedicineCategory, Medicine, Supplier, Sale, Article
+from .models import MedicineCategory, Medicine, Supplier, Sale
+from news.models import Article
 from .helpers import plot_last_days_sales
 
 
@@ -160,30 +161,6 @@ class StatisticsView(PermissionRequiredMixin, generic.ListView):
         Return the sales
         """
         return Sale.objects.order_by("-date")
-    
-
-class NewsIndexView(generic.ListView):
-    template_name = "pharmacy/news_index.html"
-    context_object_name = "news_list"
-
-    def get_queryset(self):
-        """
-        Return the news
-        """
-        return Article.objects.order_by("-pub_date")
-
-    def get(self, request, *args, **kwargs):
-        logger.info('In news index view')
-        return super().get(request, *args, **kwargs)
-    
-
-class NewsDetailView(generic.DetailView):
-    model = Article
-    template_name = "pharmacy/news_detail.html"
-
-    def get(self, request, *args, **kwargs):
-        logger.info('In news detail view')
-        return super().get(request, *args, **kwargs)
     
     
 class AdditionalView(generic.DetailView):

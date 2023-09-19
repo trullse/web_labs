@@ -26,10 +26,6 @@ urlpatterns = [
     path("suppliers/<int:pk>/", views.SuppliersDetailView.as_view(), name="supplier_detail"),
     # ex: /pharmacy/statistics/
     path("statistics/", views.StatisticsView.as_view(), name="statistics"),
-    # ex: /pharmacy/news/
-    path("news/", views.NewsIndexView.as_view(), name="news_index"),
-    # ex: /pharmacy/news/2
-    path("news/<int:pk>/", views.NewsDetailView.as_view(), name="news_detail"),
     # ex: /pharmacy/additional
     path("additional/", views.AdditionalView.as_view(), name="additional"),
     # ex: /pharmacy/about

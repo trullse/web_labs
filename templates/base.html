@@ -18,7 +18,7 @@
                 <a href="{% url 'pharmacy:index' %}">
                     <img src="{% static 'pharmacy/images/HealthHub.png' %}" alt="HealthHub logo" height="50">
                 </a>&nbsp;&nbsp;&nbsp;
-                <a href="{% url 'pharmacy:news_index' %}">News</a>&nbsp;|&nbsp;
+                <a href="{% url 'news:news_index' %}">News</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:category_index' %}">Categories</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:medicine_index' %}">Medicines</a>&nbsp;|&nbsp;
                 {% if perms.pharmacy.view_supplier %}
