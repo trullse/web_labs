@@ -83,3 +83,10 @@ class PrivacyPolicyView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         logger.info('In privacy-policy view')
         return super().get(request, *args, **kwargs)
+    
+class VacanciesView(generic.TemplateView):
+    template_name = "vacancies.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In vacancies view')
+        return super().get(request, *args, **kwargs)
