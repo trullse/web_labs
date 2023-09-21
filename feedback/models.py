@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime
+from django.utils import timezone
 
 
 class Feedback(models.Model):
@@ -11,7 +11,7 @@ class Feedback(models.Model):
         VERY_GOOD = 5
 
     name = models.CharField(max_length=100)
-    pub_date = models.DateTimeField("Publish date", default=datetime(2023, 9, 1, 12, 0))
+    pub_date = models.DateTimeField("Publish date", default=timezone.now)
     text = models.TextField()
     estimation = models.IntegerField(choices=Estimation.choices)
 
