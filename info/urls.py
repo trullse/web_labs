@@ -11,4 +11,6 @@ urlpatterns = [
     path("about/", views.AboutView.as_view(), name="about"),
     # ex: /faq
     path("faq/", views.FAQView.as_view(), name="faq"),
+    # ex: /contacts
+    path("contacts/", views.ContactsView.as_view(), name="contacts"),
 ]

@@ -67,3 +67,11 @@ class FAQView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         logger.info('In faq view')
         return super().get(request, *args, **kwargs)
+    
+
+class ContactsView(generic.TemplateView):
+    template_name = "contacts.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In contacts view')
+        return super().get(request, *args, **kwargs)
