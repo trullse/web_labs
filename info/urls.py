@@ -13,4 +13,6 @@ urlpatterns = [
     path("faq/", views.FAQView.as_view(), name="faq"),
     # ex: /contacts
     path("contacts/", views.ContactsView.as_view(), name="contacts"),
+    # ex: /privacy
+    path("privacy/", views.PrivacyPolicyView.as_view(), name="privacy"),
 ]

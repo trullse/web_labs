@@ -75,3 +75,11 @@ class ContactsView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         logger.info('In contacts view')
         return super().get(request, *args, **kwargs)
+    
+
+class PrivacyPolicyView(generic.TemplateView):
+    template_name = "privacy_policy.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In privacy-policy view')
+        return super().get(request, *args, **kwargs)
