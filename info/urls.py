@@ -17,4 +17,6 @@ urlpatterns = [
     path("privacy/", views.PrivacyPolicyView.as_view(), name="privacy"),
     # ex: /vacancies
     path("vacancies/", views.VacanciesView.as_view(), name="vacancies"),
+    # ex: /coupons
+    path("coupons/", views.CouponsView.as_view(), name="coupons"),
 ]

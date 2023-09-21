@@ -90,3 +90,11 @@ class VacanciesView(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         logger.info('In vacancies view')
         return super().get(request, *args, **kwargs)
+    
+
+class CouponsView(generic.TemplateView):
+    template_name = "coupons.html"
+
+    def get(self, request, *args, **kwargs):
+        logger.info('In coupons view')
+        return super().get(request, *args, **kwargs)

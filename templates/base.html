@@ -18,6 +18,7 @@
                 <a href="{% url 'news:news_index' %}">News</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:category_index' %}">Categories</a>&nbsp;|&nbsp;
                 <a href="{% url 'pharmacy:medicine_index' %}">Medicines</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:coupons' %}">Coupons</a>&nbsp;|&nbsp;
                 {% if perms.pharmacy.view_supplier %}
                 <a href="{% url 'pharmacy:supplier_index' %}">Suppliers</a>&nbsp;|&nbsp;
                 {% endif %}
