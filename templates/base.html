@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,16 @@
     <title>{% block title %}Pharmacy{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Pharmacy, Drugs, Medicines"/>
+    <meta name="description" content="HealthHub Pharmacy web-site. Medicines, drugs, qualificated help, coupons and more."/>
+    <meta name="author" content="Aliaksei Leanenka"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
 
 </head>
 
     <body>
         <header>
             <nav>
-                {% load static %}
                 <a href="{% url 'info:index' %}">
                     <img src="{% static 'images/HealthHub.png' %}" alt="HealthHub logo" height="50">
                 </a>&nbsp;&nbsp;&nbsp;
