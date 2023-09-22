@@ -4,12 +4,24 @@
 
 {% block content %}
 {% load static %}
+<aside>
+    <nav>
+        <h2>Content</h2>
+        <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#company">Company details</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+            <li><a href="#privacy">Privacy policy</a></li>
+        </ul>
+    </nav>
+</aside>
+
 <video height="480" 
        src="{% static 'info/videos/HealthHub_video.mp4' %}"
        autoplay controls preload="none" muted>
   Video cannot be displayed
 </video>
-<section itemscope itemtype="http://schema.org/Organization">
+<section itemscope itemtype="http://schema.org/Organization" id="about">
     <h1 itemprop="name">HealthHub Pharmacy</h1>
     <p itemprop="description">
         Welcome to HealthHub, your trusted source for all your healthcare needs. We are dedicated to 
@@ -76,7 +88,7 @@
     </p>
 </section>
 <br>
-<section>
+<section id="company">
 <h1>Pharmacy details</h1>
     <div itemscope itemtype="http://schema.org/Pharmacy">
         <p>
@@ -105,7 +117,7 @@
     </div>
 </section>
 <br>
-<section>
+<section id="certificate">
     <h3>Ministry of Health of the Republic of Belarus</h3>
     <h2 itemprop="license">Pharmacy License</h2>
     № 123873457
@@ -113,5 +125,7 @@
     The license is granted to a limited liability company "HealthHub Pharmacy"
 </section>
 <br>
-<a href="{% url 'info:privacy' %}">Privacy policy</a>
+<section id="privacy">
+    <a href="{% url 'info:privacy' %}">Privacy policy</a>
+</section>
 {% endblock %}

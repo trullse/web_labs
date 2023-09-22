@@ -3,6 +3,7 @@
 {% block title %}Additional{% endblock %}
 
 {% block content %}
+{% load static %}
 <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
 <div id="player"></div>
 
@@ -21,7 +22,7 @@
         player = new YT.Player('player', {
             height: '360',
             width: '640',
-            videoId: 'e-c8KjFmcJ4',
+            videoId: 'ok-plXXHlWw',
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -50,4 +51,55 @@
 </script>
 <h2>{{ setup }}</h2>
 <h3>{{ punchline }}</h3>
+
+<h2>Listing</h2>
+<code>
+    name = input("Введите ваше имя: ")<br>
+    print(f"Привет, {name}!")
+</code>
+
+<h2>Abbreviation</h2>
+<abbr title="Belarusian State University of Informatics and Radioelectronics">BSUIR</abbr>
+
+<h2>Defenition</h2>
+<dfn title="BSUIR">apple</dfn> is a university in Belarus.
+
+<h2>Quote</h2>
+<q>Some quote.</q>
+
+<h2>Line-movement</h2>
+<p>
+    HTML - язык,<wbr> как чистый лист,<br>
+    Создаем веб,<wbr> будто художник арт.<br>
+    Теги, структура,<wbr> мир великий,<br>
+    С HTML в вебе мы всегда на пике.
+</p>
+
+<h2>Download link</h2>
+<a href="{% static 'info/images/ad/ad_wide.jpg' %}" download>Link</a>
+
+<h2>Table</h2>
+<table border="1">
+    <thead>
+      <tr>
+        <th id="header1">Header 1</th>
+        <th id="header2">Header 2</th>
+        <th id="header3">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td headers="header1" rowspan="2">first</td>
+        <td headers="header2" colspan="2">second</td>
+      </tr>
+      <tr>
+        <td headers="header2">2</td>
+        <td headers="header3">3</td>
+      </tr>
+    </tbody>
+</table>
+
+<h2>IFrame</h2>
+<iframe src="{% url 'info:index' %}" title="metadata"></iframe>
+
 {% endblock %}
