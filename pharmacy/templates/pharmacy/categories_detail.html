@@ -1,14 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ medicinecategory.name }}</h1>
-{% if medicinecategory.medicine_set.all %}
-<ul>
-    {% for medicine in medicinecategory.medicine_set.all %}
-    <li><a href="{% url 'pharmacy:medicine_detail' medicine.id %}">{{ medicine.name }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No medicines are available.</p>
+<div itemscope itemtype="https://schema.org/ItemList"></div>
+    <h1>{{ medicinecategory.name }}</h1>
+    {% if medicinecategory.medicine_set.all %}
+    <ul>
+        {% for medicine in medicinecategory.medicine_set.all %}
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/MedicalBusiness"></li>
+            <a href="{% url 'pharmacy:medicine_detail' medicine.id %}">
+                <span itemprop="name">{{ medicine.name }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No medicines are available.</p>
+</div>
 {% endif %}
 {% endblock %}

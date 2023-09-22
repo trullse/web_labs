@@ -19,12 +19,12 @@
 
 {% if last_article != null %}
 <h2>Latest article:</h2>
-<figure>
-    <h2>{{ last_article.title }}</h2>
-    <img src="{{ last_article.img_source.url }}" height="400" alt="{{ last_article.title }}">
-    <div>{{ last_article.get_brief }} <a href="{% url 'news:news_detail' last_article.id %}">Continue reading</a></div>
+<figure itemprop="isPartOf" itemscope itemtype="http://schema.org/NewsArticle">
+    <h2 itemprop="headline">{{ last_article.title }}</h2>
+    <img src="{{ last_article.img_source.url }}" height="400" alt="{{ last_article.title }}" itemprop="image">
+    <div itemprop="articleBody">{{ last_article.get_brief }} <a href="{% url 'news:news_detail' last_article.id %}">Continue reading</a></div>
 </figure>
-<a href="{% url 'news:news_index' %}">View more articles</a>
+<a href="{% url 'news:news_index' %}" itemprop="isRelatedTo">View more articles</a>
 {% endif %}
 
 <h2>Out partners:</h2>

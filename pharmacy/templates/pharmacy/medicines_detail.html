@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ medicine.name }}</h1>
-<p>Category: {{ medicine.category }}</p>
-<p>Price: {{ medicine.price }}</p>
-<p>Supplier: {{ medicine.supplier.name }}</p>
-<h3>Description:</h3>
-<p>{{ medicine.description }}</p>
-<h3>Instruction:</h3>
-<p>{{ medicine.instruction }}</p>
+<div itemscope itemtype="https://schema.org/MedicalProduct">
+    <h1 itemprop="name">{{ medicine.name }}</h1>
+    <p>Category: <span itemprop="category">{{ medicine.category }}</span></p>
+    <p>Price: <span itemprop="price">{{ medicine.price }}</span></p>
+    <p>Supplier: <span itemprop="manufacturer">{{ medicine.supplier.name }}</span></p>
+    <h3>Description:</h3>
+    <p itemprop="description">{{ medicine.description }}</p>
+    <h3>Instruction:</h3>
+    <p itemprop="instructions">{{ medicine.instruction }}</p>
+</div>
 {% endblock %}

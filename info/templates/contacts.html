@@ -6,20 +6,26 @@
 {% load static %}
 <h1>Contacts</h1>
 
-<h3>Steven Wolfe</h3>
-<img src="{% static 'info/images/employees/worker2.jpg' %}" height="200" width="200">
-<div>Pharmacy manager</div>
-<div>E-mail: <a href="mailto:s.wolfe@gmail.com">s.wolfe@gmail.com</a></div>
-<div>Phone: <a href="tel:+375-29-667-98-69">+375-29-667-98-69</a></div>
+<div itemscope itemtype="http://schema.org/Person">
+    <h3 itemprop="name">Steven Wolfe</h3>
+    <img src="{% static 'info/images/employees/worker2.jpg' %}" height="200" width="200" alt="Steven Wolfe">
+    <div itemprop="jobTitle">Pharmacy manager</div>
+    <div itemprop="email">E-mail: <a href="mailto:s.wolfe@gmail.com">s.wolfe@gmail.com</a></div>
+    <div itemprop="telephone">Phone: <a href="tel:+375-29-667-98-69">+375-29-667-98-69</a></div>
+</div>
 
-<h3>Maria Dollberg</h3>
-<img src="{% static 'info/images/employees/worker1.jpg' %}" height="200" width="200">
-<div>Pharmacist</div>
-<div>E-mail: <a href="mailto:m.dollberg@gmail.com">m.dollberg@gmail.com</a></div>
+<div itemscope itemtype="http://schema.org/Person">
+    <h3 itemprop="name">Maria Dollberg</h3>
+    <img src="{% static 'info/images/employees/worker1.jpg' %}" height="200" width="200" alt="Maria Dollberg">
+    <div itemprop="jobTitle">Pharmacist</div>
+    <div itemprop="email">E-mail: <a href="mailto:m.dollberg@gmail.com">m.dollberg@gmail.com</a></div>
+</div>
 
-<h3>Ann Jhonson</h3>
-<img src="{% static 'info/images/employees/worker3.jpg' %}" height="200" width="200">
-<div>Pharmacist</div>
-<div>E-mail: <a href="mailto:a.jhonson@gmail.com">a.jhonson@gmail.com</a></div>
+<div itemscope itemtype="http://schema.org/Person">
+    <h3 itemprop="name">Ann Jhonson</h3>
+    <img src="{% static 'info/images/employees/worker3.jpg' %}" height="200" width="200" alt="Ann Jhonson">
+    <div itemprop="jobTitle">Pharmacist</div>
+    <div itemprop="email">E-mail: <a href="mailto:a.jhonson@gmail.com">a.jhonson@gmail.com</a></div>
+</div>
 
 {% endblock %}

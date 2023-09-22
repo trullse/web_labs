@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>{{ article.title }}</h2>
-    <img src="{{ article.img_source.url }}" height="600" alt="{{ article.title }}">
-    <div>{{ article.content }}</div>
+<article itemprop="article" itemscope itemtype="https://schema.org/NewsArticle">
+    <h2 itemprop="headline">{{ article.title }}</h2>
+    <img itemprop="image" src="{{ article.img_source.url }}" height="600" alt="{{ article.title }}">
+    <div itemprop="articleBody">{{ article.content }}</div>
+</article>
 {% endblock %}

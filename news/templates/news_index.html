@@ -5,10 +5,10 @@
 {% if news_list %}
 <ul>
     {% for article in news_list %}
-    <figure>
-        <h1>{{ article.title }}</h1>
-        <img src="{{ article.img_source.url }}" height="400" alt="{{ article.title }}">
-        <div>{{ article.get_brief }} <a href="{% url 'news:news_detail' article.id %}">Continue reading</a></div>
+    <figure itemprop="article" itemscope itemtype="https://schema.org/NewsArticle">
+        <h1 itemprop="headline">{{ article.title }}</h1>
+        <img itemprop="image" src="{{ article.img_source.url }}" height="400" alt="{{ article.title }}">
+        <div itemprop="description">{{ article.get_brief }} <a href="{% url 'news:news_detail' article.id %}" itemprop="url">Continue reading</a></div>
     </figure>
     {% endfor %}
 </ul>
