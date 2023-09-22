@@ -9,7 +9,7 @@
        autoplay controls preload="none" muted>
   Video cannot be displayed
 </video>
-<article itemscope itemtype="http://schema.org/Organization">
+<section itemscope itemtype="http://schema.org/Organization">
     <h1 itemprop="name">HealthHub Pharmacy</h1>
     <p itemprop="description">
         Welcome to HealthHub, your trusted source for all your healthcare needs. We are dedicated to 
@@ -74,40 +74,44 @@
         Thank you for choosing HealthHub Pharmacy as your healthcare destination. We're here to support you on your 
         path to better health.
     </p>
-</article>
+</section>
 <br>
+<section>
 <h1>Pharmacy details</h1>
-<div itemscope itemtype="http://schema.org/Pharmacy">
-    <p>
-        Business Name: <span itemprop="name">HealthHub Pharmacy</span>
-    </p>
-    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        Address:
-        <span itemprop="streetAddress">Nezalezhnasti 56</span>,
-        <span itemprop="addressLocality">Minsk</span>,
-        <span itemprop="addressRegion">Belarus</span>
-        ZIP-code: <span itemprop="postalCode"></span>213633</span>
-    </p>
-    <p itemprop="telephone">
-        Phone: +375 29 567-34-12
-    </p>
-    <p itemprop="email">
-        Email: info@healthhubpharmacy.com
-    </p>
-    <p>
-        Hours of Operation:
-    </p>
-    <p itemprop="openingHours">
-        Monday to Friday: 9:00 AM - 7:00 PM<br>
-        Saturday and Sunday: 10:00 AM - 4:00 PM
-    </p>
-</div>
+    <div itemscope itemtype="http://schema.org/Pharmacy">
+        <p>
+            Business Name: <span itemprop="name">HealthHub Pharmacy</span>
+        </p>
+        <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            Address:
+            <span itemprop="streetAddress">Nezalezhnasti 56</span>,
+            <span itemprop="addressLocality">Minsk</span>,
+            <span itemprop="addressRegion">Belarus</span>
+            ZIP-code: <span itemprop="postalCode"></span>213633</span>
+        </p>
+        <p itemprop="telephone">
+            Phone: +375 29 567-34-12
+        </p>
+        <p itemprop="email">
+            Email: info@healthhubpharmacy.com
+        </p>
+        <p>
+            Hours of Operation:
+        </p>
+        <p itemprop="openingHours">
+            Monday to Friday: 9:00 AM - 7:00 PM<br>
+            Saturday and Sunday: 10:00 AM - 4:00 PM
+        </p>
+    </div>
+</section>
 <br>
-<h3>Ministry of Health of the Republic of Belarus</h3>
-<h2 itemprop="license">Pharmacy License</h2>
-№ 123873457
-<br><br><br><br><br>
-The license is granted to a limited liability company "HealthHub Pharmacy"
+<section>
+    <h3>Ministry of Health of the Republic of Belarus</h3>
+    <h2 itemprop="license">Pharmacy License</h2>
+    № 123873457
+    <br><br><br><br><br>
+    The license is granted to a limited liability company "HealthHub Pharmacy"
+</section>
 <br>
 <a href="{% url 'info:privacy' %}">Privacy policy</a>
 {% endblock %}
