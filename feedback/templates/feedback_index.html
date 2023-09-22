@@ -7,9 +7,9 @@
     {% for feedback in feedback_list %}
     <figure>
         <h1>{{ feedback.name }}</h1>
-        <div>{{ feedback.pub_date }}</div>
-        <div>{{ feedback.estimation }}</div>
-        <div>{{ feedback.text }}</div>
+        <p>{{ feedback.pub_date }}</p>
+        <p>{{ feedback.estimation }}</p>
+        <p>{{ feedback.text }}</p>
     </figure>
     {% endfor %}
 </ul>

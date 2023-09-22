@@ -4,8 +4,8 @@
 
 {% block content %}
 {% load static %}
-<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-<div id="player"></div>
+<!-- 1. The <iframe> (and video player) will replace this <p> tag. -->
+<p id="player"></p>
 
 <script>
     // 2. This code loads the IFrame Player API code asynchronously.
@@ -89,8 +89,8 @@
     </thead>
     <tbody>
       <tr>
-        <td headers="header1" rowspan="2">first</td>
-        <td headers="header2" colspan="2">second</td>
+        <td headers="header1" rowp="2">first</td>
+        <td headers="header2" colp="2">second</td>
       </tr>
       <tr>
         <td headers="header2">2</td>
@@ -100,6 +100,6 @@
 </table>
 
 <h2>IFrame</h2>
-<iframe src="{% url 'info:index' %}" title="metadata"></iframe>
+<iframe src="https://bsuir.by" title="metadata"></iframe>
 
 {% endblock %}
