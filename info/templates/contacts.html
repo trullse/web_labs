@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block content %}
+{% load static %}
+<h1>Contacts</h1>
+
+<p itemscope itemtype="https://schema.org/Person">
+    <h3 itemprop="name">Steven Wolfe</h3>
+    <img src="{% static 'info/images/employees/worker2.jpg' %}" height="200" width="200" alt="Steven Wolfe">
+    <p itemprop="jobTitle">Pharmacy manager</p>
+    <p itemprop="email">E-mail: <a href="mailto:s.wolfe@gmail.com">s.wolfe@gmail.com</a></p>
+    <p itemprop="telephone">Phone: <a href="tel:+375-29-667-98-69">+375-29-667-98-69</a></p>
+</p>
+
+<p itemscope itemtype="https://schema.org/Person">
+    <h3 itemprop="name">Maria Dollberg</h3>
+    <img src="{% static 'info/images/employees/worker1.jpg' %}" height="200" width="200" alt="Maria Dollberg">
+    <p itemprop="jobTitle">Pharmacist</p>
+    <p itemprop="email">E-mail: <a href="mailto:m.dollberg@gmail.com">m.dollberg@gmail.com</a></p>
+</p>
+
+<p itemscope itemtype="https://schema.org/Person">
+    <h3 itemprop="name">Ann Jhonson</h3>
+    <img src="{% static 'info/images/employees/worker3.jpg' %}" height="200" width="200" alt="Ann Jhonson">
+    <p itemprop="jobTitle">Pharmacist</p>
+    <p itemprop="email">E-mail: <a href="mailto:a.jhonson@gmail.com">a.jhonson@gmail.com</a></p>
+</p>
+
+{% endblock %}

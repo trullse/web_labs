@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Vacancies{% endblock %}
+
+{% block content %}
+
+<h1>Current Job Vacancies</h1>
+    <p>
+        To contact with us use:<br>
+        <strong>E-mail:</strong> <a href="mailto:job@health-hub.com">job@health-hub.com</a><br>
+        <strong>Phone:</strong> <a href="tel:+375-29-765-88-89">+375-29-765-88-89</a>
+    </p>
+
+    <p class="job-vacancy" itemscope itemtype="https://schema.org/JobPosting">
+        <h2 itemprop="title">Pharmacist</h2>
+        <p itemprop="description">We are seeking a licensed Pharmacist to join our team at HealthHub Pharmacy. The ideal candidate should have excellent communication skills, attention to detail, and a passion for providing exceptional patient care. Responsibilities include dispensing medications, providing drug information, and offering health consultations.</p>
+        <p><strong>Location:</strong> <p itemprop="jobLocation">Minsk</p></p>
+        <p><strong>Qualifications:</strong> 
+            <ul>
+                <li itemprop="qualifications">Pharm.D. degree</li>
+                <li itemprop="qualifications">Active state pharmacist license</li>
+                <li itemprop="qualifications">Strong knowledge of pharmaceuticals</li>
+                <li itemprop="qualifications">Excellent customer service skills</li>
+            </ul>
+        </p>
+    </p>
+    
+    <p class="job-vacancy" itemscope itemtype="https://schema.org/JobPosting">
+        <h2 itemprop="title">Pharmacy Technician</h2>
+        <p itemprop="description">We are looking for a Pharmacy Technician to join our team at HealthHub Pharmacy. The ideal candidate should be detail-oriented, organized, and committed to providing efficient support in prescription processing, inventory management, and customer service.</p>
+        <p><strong>Location:</strong> <p itemprop="jobLocation">Minsk</p></p>
+        <p><strong>Qualifications:</strong> 
+            <ul>
+                <li itemprop="qualifications">Certified Pharmacy Technician (CPhT)</li>
+                <li itemprop="qualifications">Strong organizational skills</li>
+                <li itemprop="qualifications">Attention to detail</li>
+                <li itemprop="qualifications">Excellent interpersonal skills</li>
+            </ul>
+        </p>
+    </p>
+    
+    <p class="job-vacancy" itemscope itemtype="https://schema.org/JobPosting">
+        <h2 itemprop="title">Customer Service Representative</h2>
+        <p itemprop="description">We are currently hiring a Customer Service Representative to join our team at HealthHub Pharmacy. The ideal candidate should have outstanding communication skills, empathy, and the ability to provide exceptional service to our patients. Responsibilities include answering inquiries, resolving issues, and assisting with prescription-related questions.</p>
+        <p><strong>Location:</strong> <p itemprop="jobLocation">Minsk</p></p>
+        <p><strong>Qualifications:</strong> 
+            <ul>
+                <li itemprop="qualifications">High school diploma or equivalent</li>
+                <li itemprop="qualifications">Excellent communication skills</li>
+                <li itemprop="qualifications">Customer service experience</li>
+                <li itemprop="qualifications">Basic computer skills</li>
+            </ul>
+        </p>
+    </p>
+
+{% endblock %}

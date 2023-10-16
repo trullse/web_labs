@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{% block title %}Pharmacy{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Pharmacy, Drugs, Medicines"/>
+    <meta name="description" content="HealthHub Pharmacy web-site. Medicines, drugs, qualificated help, coupons and more."/>
+    <meta name="author" content="Aliaksei Leanenka"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+</head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="{% url 'info:index' %}">
+                    <img src="{% static 'images/HealthHub.png' %}" alt="HealthHub logo" height="50">
+                </a>&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'news:news_index' %}">News</a>&nbsp;|&nbsp;
+                <a href="{% url 'pharmacy:category_index' %}">Categories</a>&nbsp;|&nbsp;
+                <a href="{% url 'pharmacy:medicine_index' %}">Medicines</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:coupons' %}">Coupons</a>&nbsp;|&nbsp;
+                {% if perms.pharmacy.view_supplier %}
+                <a href="{% url 'pharmacy:supplier_index' %}">Suppliers</a>&nbsp;|&nbsp;
+                {% endif %}
+                {% if perms.pharmacy.view_sale %}
+                <a href="{% url 'pharmacy:sale_index' %}">Sales</a>&nbsp;|&nbsp;
+                {% endif %}
+                {% if perms.pharmacy.view_sale %}
+                <a href="{% url 'pharmacy:statistics' %}">Statistics</a>&nbsp;|&nbsp;
+                {% endif %}
+                <a href="{% url 'info:about' %}">About</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:contacts' %}">Contacts</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:vacancies' %}">Vacancies</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:faq' %}">FAQ</a>&nbsp;|&nbsp;
+                <a href="{% url 'feedback:feedback_index' %}">Feedbacks</a>&nbsp;|&nbsp;
+                <a href="{% url 'info:additional' %}">Additional</a>&nbsp;|&nbsp;
+                {% if user.is_authenticated %}
+                Welcome, {{ user.get_username }} &nbsp;&nbsp;&nbsp;
+                <a href="{% url 'logout'%}?next={{request.path}}">Logout</a>
+                {% else %}
+                Unauthorized, <a href="{% url 'login'%}?next={{request.path}}">login</a>
+                {% endif %}
+            </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>

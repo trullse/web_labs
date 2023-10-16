@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Pharmacy homepage</h1>
+
+<a href="https://sinupret.com/">
+    <figure>
+        {% load static %}
+        <img src="{% static 'info/images/ad/ad_wide.jpg' %}" alt="Advertisement" width="1000"
+
+            srcset="{% static 'info/images/ad/ad_wide.jpg' %} 1920w,
+                    {% static 'info/images/ad/ad_short.jpg' %} 1200w"
+        >
+        <figcaption>Advertisement</figcaption>
+    </figure>
+</a>
+
+{% if last_article != null %}
+<h2>Latest article:</h2>
+<figure itemprop="isPartOf" itemscope itemtype="https://schema.org/NewsArticle">
+    <h2 itemprop="headline">{{ last_article.title }}</h2>
+    <img src="{{ last_article.img_source.url }}" height="400" alt="{{ last_article.title }}" itemprop="image">
+    <p itemprop="articleBody">{{ last_article.get_brief }} <a href="{% url 'news:news_detail' last_article.id %}">Continue reading</a></p>
+</figure>
+<a href="{% url 'news:news_index' %}" itemprop="isRelatedTo">View more articles</a>
+{% endif %}
+
+<h2>Out partners:</h2>
+<a href="https://www.jnj.com/">
+    <img src="{% static 'info/images/partners/jnj.svg' %}" alt="Jhonson and Jhonson" height="100">
+</a>
+<a href="https://www.gsk.com/">
+    <img src="{% static 'info/images/partners/gsk.png' %}" alt="GSK" height="100">
+</a>
+<a href="https://www.bayer.com/">
+    <img src="{% static 'info/images/partners/bayer.png' %}" alt="Bayer" height="100">
+</a>
+<a href="https://www.novartis.com/">
+    <img src="{% static 'info/images/partners/novartis.png' %}" alt="Novartis" height="100">
+</a>
+<a href="https://www.pfizer.com/">
+    <img src="{% static 'info/images/partners/pfizer.png' %}" alt="Pfizer" height="100">
+</a>
+
+{% endblock %}

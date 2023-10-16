@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Feedbacks{% endblock %}
+{% block content %}
+{% if feedback_list %}
+<ul>
+    {% for feedback in feedback_list %}
+    <figure>
+        <h1>{{ feedback.name }}</h1>
+        <p>{{ feedback.pub_date }}</p>
+        <p>{{ feedback.estimation }}</p>
+        <p>{{ feedback.text }}</p>
+    </figure>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No feedbacks are available.</p>
+{% endif %}
+<a href="{% url 'feedback:feedback_add' %}">Add feedback</a>
+{% endblock %}

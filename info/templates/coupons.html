@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Coupons{% endblock %}
+
+{% block content %}
+{% load static %}
+<h1>Coupons</h1>
+
+<h2>Active</h2>
+<figure itemscope itemtype="https://schema.org/Offer">
+    <h3 itemprop="name">Sinupret for half a price!</h3>
+    <p><strong>Coupon:</strong> <p itemprop="sku">1212</p></p>
+</figure>
+<figure itemscope itemtype="https://schema.org/Offer">
+    <h3 itemprop="name">Two vitamin bar for one's price</h3>
+    <p><strong>Coupon:</strong> <p itemprop="sku">5555</p></p>
+</figure>
+
+<h2>Archive</h2>
+<figure itemscope itemtype="https://schema.org/Offer">
+    <h3 itemprop="name">Free sticker pack for opening!</h3>
+    <p><strong>Coupon:</strong> <p itemprop="sku">0109</p></p>
+</figure>
+
+{% endblock %}
