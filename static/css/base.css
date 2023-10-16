@@ -1,0 +1,19 @@
+/* Links styles */
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+    color: lightgreen;
+}
+
+a:visited {
+    color: rgb(15, 88, 15);
+}
