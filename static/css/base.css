@@ -17,3 +17,75 @@ a:active {
 a:visited {
     color: rgb(15, 88, 15);
 }
+
+/* Fonts */
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../static/fonts/lato/Lato-Regular.eot');
+	src: local('Lato Regular'), local('Lato-Regular'),
+		url('../fonts/lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/lato/Lato-Regular.woff2') format('woff2'),
+		url('../fonts/lato/Lato-Regular.woff') format('woff'),
+		url('../fonts/lato/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/Lato-Medium.eot');
+	src: local('Lato Medium'), local('Lato-Medium'),
+		url('../fonts/lato/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/lato/Lato-Medium.woff2') format('woff2'),
+		url('../fonts/lato/Lato-Medium.woff') format('woff'),
+		url('../fonts/lato/Lato-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/roboto/Roboto-Regular.eot');
+	src: local('Roboto'), local('Roboto-Regular'),
+		url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/roboto/Roboto-Regular.woff') format('woff'),
+		url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/roboto/Roboto-Medium.eot');
+	src: local('Roboto Medium'), local('Roboto-Medium'),
+		url('../fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/roboto/Roboto-Medium.woff') format('woff'),
+		url('../fonts/roboto/Roboto-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Text */
+
+p {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+#navigation-top {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-size: 20px;
+}
