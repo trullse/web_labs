@@ -1,9 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Pharmacy homepage</h1>
+<h1>Welcome to <span id="company-name">HealthHub</span>!</h1>
 
 <a href="https://sinupret.com/">
     <figure>
@@ -28,20 +33,32 @@
 {% endif %}
 
 <h2>Out partners:</h2>
-<a href="https://www.jnj.com/">
-    <img src="{% static 'info/images/partners/jnj.svg' %}" alt="Jhonson and Jhonson" height="100">
-</a>
-<a href="https://www.gsk.com/">
-    <img src="{% static 'info/images/partners/gsk.png' %}" alt="GSK" height="100">
-</a>
-<a href="https://www.bayer.com/">
-    <img src="{% static 'info/images/partners/bayer.png' %}" alt="Bayer" height="100">
-</a>
-<a href="https://www.novartis.com/">
-    <img src="{% static 'info/images/partners/novartis.png' %}" alt="Novartis" height="100">
-</a>
-<a href="https://www.pfizer.com/">
-    <img src="{% static 'info/images/partners/pfizer.png' %}" alt="Pfizer" height="100">
-</a>
+<div class="partners">
+    <a href="https://www.jnj.com/">
+        <div class="partner-background">
+            <img src="{% static 'info/images/partners/jnj.png' %}" alt="Jhonson and Jhonson" class="partner-image" width="100">
+        </div>
+    </a>
+    <a href="https://www.gsk.com/">
+        <div class="partner-background">
+            <img src="{% static 'info/images/partners/gsk.png' %}" alt="GSK" class="partner-image" width="100">
+        </div>
+    </a>
+    <a href="https://www.bayer.com/">
+        <div class="partner-background">
+            <img src="{% static 'info/images/partners/bayer.png' %}" alt="Bayer" class="partner-image" width="100">
+        </div>
+    </a>
+    <a href="https://www.novartis.com/">
+        <div class="partner-background">
+            <img src="{% static 'info/images/partners/novartis.png' %}" alt="Novartis" class="partner-image" width="100">
+        </div>
+    </a>
+    <a href="https://www.pfizer.com/">
+        <div class="partner-background">
+            <img src="{% static 'info/images/partners/pfizer.png' %}" alt="Pfizer" class="partner-image" width="100">
+        </div>
+    </a>
+</div>
 
 {% endblock %}
