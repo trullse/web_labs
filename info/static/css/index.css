@@ -16,4 +16,6 @@ div.partner-background {
 
 #company-name {
     font-kerning: normal;
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-weight: 700;
 }
