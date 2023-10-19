@@ -112,4 +112,19 @@ h2 {
 #navigation-top {
     font-family: 'Lato', 'Roboto', sans-serif;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+body {
+    margin: 0;
 }

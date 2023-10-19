@@ -29,7 +29,6 @@ div.partner-background {
 #ad-block {
     display: flex;
     justify-content: center;
-    position: relative;
     animation-name: ad-animation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
