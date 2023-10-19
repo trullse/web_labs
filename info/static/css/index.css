@@ -19,3 +19,22 @@ div.partner-background {
     font-family: 'Lato', 'Roboto', sans-serif;
     font-weight: 700;
 }
+
+@keyframes ad-animation {
+    0%   {scale: 1.0}
+    50%  {scale: 1.05}
+    100% {scale: 1.0}
+  }
+
+#ad-block {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation-name: ad-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#ad-block:hover {
+    transform: scale(1.05);
+}

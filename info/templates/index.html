@@ -10,17 +10,16 @@
 {% block content %}
 <h1>Welcome to <span id="company-name">HealthHub</span>!</h1>
 
-<a href="https://sinupret.com/">
-    <figure>
-        {% load static %}
-        <img src="{% static 'info/images/ad/ad_wide.jpg' %}" alt="Advertisement" width="1000"
+    <figure id="ad-block">
+        <a href="https://sinupret.com/">
+            <img src="{% static 'info/images/ad/ad_wide.jpg' %}" alt="Advertisement" width="1000"
 
-            srcset="{% static 'info/images/ad/ad_wide.jpg' %} 1920w,
-                    {% static 'info/images/ad/ad_short.jpg' %} 1200w"
-        >
-        <figcaption>Advertisement</figcaption>
+                srcset="{% static 'info/images/ad/ad_wide.jpg' %} 1920w,
+                        {% static 'info/images/ad/ad_short.jpg' %} 1200w"
+            >
+            <figcaption>Advertisement</figcaption>
+        </a>
     </figure>
-</a>
 
 {% if last_article != null %}
 <h2>Latest article:</h2>
