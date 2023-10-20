@@ -35,10 +35,31 @@ div.partner-background {
     animation-iteration-count: infinite;
 }
 
+#ad-block img {
+    border-radius: 0%;
+}
+
 #ad-block:hover {
     transform: scale(1.05);
 }
 
 #article-last {
     position: static;
+    max-width: 800px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5%;
+    padding: 10px 30px;
+    margin: 30px 0px;
+}
+
+.article-text-brief {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#article-last img {
+    width: 100%;
+    height: auto;
 }

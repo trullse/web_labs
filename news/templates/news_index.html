@@ -9,7 +9,7 @@
 
 {% block content %}
 {% if news_list %}
-<ul>
+<div id="articles">
     {% for article in news_list %}
     <figure itemprop="article" itemscope itemtype="https://schema.org/NewsArticle" class="article">
         <h1 itemprop="headline">{{ article.title }}</h1>
@@ -18,7 +18,7 @@
         <a href="{% url 'news:news_detail' article.id %}" itemprop="url">Continue reading</a>
     </figure>
     {% endfor %}
-</ul>
+</div>
 {% else %}
 <p>No articles are available.</p>
 {% endif %}

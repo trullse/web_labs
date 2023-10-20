@@ -166,6 +166,12 @@ body {
 	font-size: 40px;
 }
 
+.center-area {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
 .center-placed {
 	justify-content: center;
 }
@@ -235,4 +241,12 @@ body {
 table {
 	font-family: 'Lato', 'Roboto', sans-serif;
     font-size: 20px;
+}
+
+img {
+	border-radius: 5%;
+}
+
+figure {
+	margin: 0px;
 }
