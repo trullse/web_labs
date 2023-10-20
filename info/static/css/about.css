@@ -58,3 +58,9 @@
 td.about-table {
 	padding: 0px 20px;
 }
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}

@@ -29,6 +29,14 @@ a:visited {
 	flex-direction: column;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 #navigation-side {
 	vertical-align: top;
 	width: 25%;
@@ -166,6 +174,10 @@ a:visited {
 	color: green;
 }
 
+.margin-bottom-20 {
+	margin-bottom: 20px;
+}
+
 p {
     font-family: 'Lato', 'Roboto', sans-serif;
     font-size: 20px;
@@ -201,6 +213,19 @@ header {
     z-index: 1000;
     padding: 10px;
     box-shadow: 0px 0px 10px #ccc;
+}
+
+footer {
+	background-color: green;
+	padding: 50px 20px;
+	display: flex;
+	justify-content: center;
+	margin-top: auto;
+}
+
+footer > p {
+	color: white;
+	margin: 0px;
 }
 
 body {

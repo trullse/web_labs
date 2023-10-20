@@ -13,6 +13,7 @@
         <h2>Content</h2>
         <ul>
             <li><a href="#about">About us</a></li>
+            <li><a href="#history">Our history</a></li>
             <li><a href="#company">Company details</a></li>
             <li><a href="#certificate">Certificate</a></li>
             <li><a href="#privacy">Privacy policy</a></li>
@@ -21,13 +22,13 @@
 </aside>
 {% endblock %}
 {% block content %}
-<h1>About us</h1>
+<h1 id="about">About us</h1>
 <video height="480" 
        src="{% static 'info/videos/HealthHub_video.mp4' %}"
        autoplay controls preload="none" muted>
   Video cannot be displayed
 </video>
-<section itemscope itemtype="http://schema.org/Organization" id="about">
+<section itemscope itemtype="http://schema.org/Organization">
     <p itemprop="description">
         Welcome to HealthHub, your trusted source for all your healthcare needs. We are dedicated to 
         providing the highest quality pharmaceutical services, health products, and professional guidance 
@@ -52,7 +53,7 @@
         on our shelves meets stringent quality standards.
     </p>
     <br>
-    <h1>Our history</h1>
+    <h1 id="history">Our history</h1>
     <table>
         <tr>
             <td class="about-table medium-text bold-text color-company">
@@ -141,20 +142,20 @@
     <h1>Pharmacy details</h1>
     <p itemscope itemtype="http://schema.org/Pharmacy">
         <p>
-            Business Name: <p itemprop="name">HealthHub Pharmacy</p>
+            Business Name: <span itemprop="name" class="italic-text">HealthHub Pharmacy</p>
         </p>
         <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             Address:
-            <p itemprop="streetAddress">Nezalezhnasti 56</p>,
-            <p itemprop="addressLocality">Minsk</p>,
-            <p itemprop="addressRegion">Belarus</p>
-            ZIP-code: <p itemprop="postalCode"></p>213633</p>
+            <span itemprop="streetAddress" class="italic-text">Nezalezhnasti 56</span>,
+            <span itemprop="addressLocality" class="italic-text">Minsk</span>,
+            <span itemprop="addressRegion" class="italic-text">Belarus</span>
+            ZIP-code: <span itemprop="postalCode" class="italic-text">213633</span></p>
         </p>
-        <p itemprop="telephone">
-            Phone: +375 29 567-34-12
+        <p>
+            Phone: <span itemprop="telephone" class="italic-text">+375 29 567-34-12</span>
         </p>
-        <p itemprop="email">
-            Email: info@healthhubpharmacy.com
+        <p>
+            Email: <span itemprop="email" class="italic-text">pharmacy@healthhub.com</span>
         </p>
         <p>
             Hours of Operation:
@@ -176,8 +177,11 @@
     </div>
 </section>
 <br>
-<section id="privacy">
-    <a href="{% url 'info:privacy' %}">Privacy policy</a>
+<h1 id="privacy">Privacy policy</h1>
+<section>
+    <p class="margin-bottom-20">
+        <a href="{% url 'info:privacy' %}">Click here to read privacy policy</a>
+    </p>
 </section>
 
 {% endblock %}
