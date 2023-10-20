@@ -50,7 +50,14 @@
         </header>
         <main>
             <div id="content-wrap">
-                {% block content %}{% endblock %}
+                <table>
+                    <td id="navigation-side">
+                        {% block navigation %}{% endblock %}
+                    </td>
+                    <td>
+                        {% block content %}{% endblock %}
+                    </td>
+                </table>
             </div>
         </main>
     </body>

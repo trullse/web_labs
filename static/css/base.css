@@ -23,8 +23,16 @@ a:visited {
 /* Content wrap */
 
 #content-wrap {
-	margin-left: 20%;
+	margin-left: 0%;
 	margin-right: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+#navigation-side {
+	vertical-align: top;
+	width: 25%;
+	padding-left: 5%;
 }
 
 /* Fonts */
@@ -150,6 +158,14 @@ a:visited {
 	font-size: 40px;
 }
 
+.center-placed {
+	justify-content: center;
+}
+
+.color-company {
+	color: green;
+}
+
 p {
     font-family: 'Lato', 'Roboto', sans-serif;
     font-size: 20px;
@@ -158,6 +174,7 @@ p {
 h1 {
     font-family: 'Lato', 'Roboto', sans-serif;
     font-weight: 500;
+	font-size: 40px;
 }
 
 h2 {
@@ -188,4 +205,9 @@ header {
 
 body {
     margin: 0;
+}
+
+table {
+	font-family: 'Lato', 'Roboto', sans-serif;
+    font-size: 20px;
 }

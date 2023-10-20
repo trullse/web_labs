@@ -48,3 +48,13 @@
 #certificate > span {
     z-index: 2;
 }
+
+#about-navigation {
+    position: sticky;
+    top: 100px;
+    left: 100px;
+}
+
+td.about-table {
+	padding: 0px 20px;
+}

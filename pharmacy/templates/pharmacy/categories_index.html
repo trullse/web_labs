@@ -2,6 +2,7 @@
 
 {% block content %}
 {% if categories_list %}
+<div>
 <ul>
     {% for category in categories_list %}
     <li><a href="{% url 'pharmacy:category_detail' category.id %}">{{ category.name }}</a></li>
