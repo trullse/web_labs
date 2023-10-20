@@ -23,7 +23,7 @@
 
 {% if last_article != null %}
 <h2>Latest article:</h2>
-<figure itemprop="isPartOf" itemscope itemtype="https://schema.org/NewsArticle">
+<figure itemprop="isPartOf" itemscope itemtype="https://schema.org/NewsArticle" id="article-last">
     <h2 itemprop="headline">{{ last_article.title }}</h2>
     <img src="{{ last_article.img_source.url }}" height="400" alt="{{ last_article.title }}" itemprop="image">
     <p itemprop="articleBody">{{ last_article.get_brief }} <a href="{% url 'news:news_detail' last_article.id %}">Continue reading</a></p>

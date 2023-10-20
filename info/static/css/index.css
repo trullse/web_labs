@@ -37,3 +37,7 @@ div.partner-background {
 #ad-block:hover {
     transform: scale(1.05);
 }
+
+#article-last {
+    position: static;
+}
