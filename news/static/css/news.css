@@ -1,0 +1,15 @@
+.article {
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.article-text-brief {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.column-layout {
+    column-count: 2;
+    column-gap: 20px;
+}

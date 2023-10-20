@@ -1,14 +1,21 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}News{% endblock %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/news.css' %}">
+{% endblock %}
+
 {% block content %}
 {% if news_list %}
 <ul>
     {% for article in news_list %}
-    <figure itemprop="article" itemscope itemtype="https://schema.org/NewsArticle">
+    <figure itemprop="article" itemscope itemtype="https://schema.org/NewsArticle" class="article">
         <h1 itemprop="headline">{{ article.title }}</h1>
         <img itemprop="image" src="{{ article.img_source.url }}" height="400" alt="{{ article.title }}">
-        <p itemprop="description">{{ article.get_brief }} <a href="{% url 'news:news_detail' article.id %}" itemprop="url">Continue reading</a></p>
+        <p itemprop="description" class="article-text-brief">{{ article.content }}</p>
+        <a href="{% url 'news:news_detail' article.id %}" itemprop="url">Continue reading</a>
     </figure>
     {% endfor %}
 </ul>
