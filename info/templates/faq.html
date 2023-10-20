@@ -1,6 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}FAQ{% endblock %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/faq.css' %}">
+{% endblock %}
 
 {% block content %}
 <h1>Frequently asked questions</h1>
@@ -8,58 +13,58 @@
     <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
         <summary itemprop="name">
             What are your pharmacy's hours of operation? [01.09.2023]
+            <img src="{% static 'info/images/plus-symbol.png' %}" height="20px">
         </summary>
         <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Our pharmacy's regular hours of operation are:<br>
-                Monday to Friday: 9:00 AM - 7:00 PM<br>
-                Saturday and Sunday: 10:00 AM - 4:00 PM
-            </p>
+            Our pharmacy's regular hours of operation are:<br>
+            Monday to Friday: 9:00 AM - 7:00 PM<br>
+            Saturday and Sunday: 10:00 AM - 4:00 PM
         </p>
     </details>
 
     <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
         <summary itemprop="name">
             Do I need a prescription to purchase medications? [02.09.2023]
+            <img src="{% static 'info/images/plus-symbol.png' %}" height="20px">
         </summary>
         <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Prescription requirements vary depending on the medication. While some drugs 
-                are available over-the-counter, others require a valid prescription from a healthcare provider. 
-                Please check with our pharmacist for specific medication requirements.
-            </p>
+            Prescription requirements vary depending on the medication. While some drugs 
+            are available over-the-counter, others require a valid prescription from a healthcare provider. 
+            Please check with our pharmacist for specific medication requirements.
         </p>
     </details>
 
     <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
         <summary itemprop="name">
             How can I dispose of expired or unused medications safely? [05.09.2023]
+            <img src="{% static 'info/images/plus-symbol.png' %}" height="20px">
         </summary>
         <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Properly disposing of expired or unused medications is crucial for safety and the 
-                environment. You can bring them to our pharmacy, and we will ensure they are disposed of 
-                correctly through approved methods.
-            </p>
+            Properly disposing of expired or unused medications is crucial for safety and the 
+            environment. You can bring them to our pharmacy, and we will ensure they are disposed of 
+            correctly through approved methods.
         </p>
     </details>
 
     <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
         <summary itemprop="name">
             Are your pharmacists available for one-on-one consultations? [14.09.2023]
+            <img src="{% static 'info/images/plus-symbol.png' %}" height="20px">
         </summary>
         <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Absolutely! Our pharmacists are available for personalized consultations to 
-                discuss your medications, answer questions, and provide medication therapy management.
-            </p>
+            Absolutely! Our pharmacists are available for personalized consultations to 
+            discuss your medications, answer questions, and provide medication therapy management.
         </p>
     </details>
 
     <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
         <summary itemprop="name">
             How do I contact your pharmacy with additional questions or concerns? [20.09.2023]
+            <img src="{% static 'info/images/plus-symbol.png' %}" height="20px">
         </summary>
         <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">You can reach us by phone at (123) 456-7890 during our business hours. You can also 
-                send us an email at info@yourpharmacy.com, or visit our "Contact Us" page on the website for more options.
-            </p>
+            You can reach us by phone at (123) 456-7890 during our business hours. You can also 
+            send us an email at info@yourpharmacy.com, or visit our "Contact Us" page on the website for more options.
         </p>
     </details>
 </article>
