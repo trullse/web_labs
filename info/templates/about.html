@@ -1,9 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}About{% endblock %}
 
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/about.css' %}">
+{% endblock %}
+
 {% block content %}
-{% load static %}
 <aside>
     <nav>
         <h2>Content</h2>
@@ -120,12 +124,15 @@
 <section id="certificate">
     <h3>Ministry of Health of the Republic of Belarus</h3>
     <h2 itemprop="license">Pharmacy License</h2>
-    № 123873457
-    <br><br><br><br><br>
-    The license is granted to a limited liability company "HealthHub Pharmacy"
+    <span class="italic">№ 123873457</span>
+    <span>The license is granted to a limited liability company "HealthHub Pharmacy"</span>
+    <div id="logo-box">
+        <img src="{% static 'images/HealthHub.png' %}" width="400px" id="logo">
+    </div>
 </section>
 <br>
 <section id="privacy">
     <a href="{% url 'info:privacy' %}">Privacy policy</a>
 </section>
+
 {% endblock %}
