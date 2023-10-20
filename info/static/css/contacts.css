@@ -1,0 +1,20 @@
+.contact-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    width: 400px;
+    height: auto;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5%;
+    margin-bottom: 50px;
+    padding: 0px 30px;
+}
+
+.contact-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
