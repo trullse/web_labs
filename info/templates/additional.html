@@ -1,9 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Additional{% endblock %}
 
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/additional.css' %}">
+{% endblock %}
+
 {% block content %}
-{% load static %}
 <!-- 1. The <iframe> (and video player) will replace this <p> tag. -->
 <p id="player"></p>
 
@@ -102,5 +106,11 @@
 
 <h2>IFrame</h2>
 <iframe src="https://bsuir.by" title="metadata"></iframe>
+
+<ul>
+    <li>Something</li>
+    <li>Something</li>
+    <li>Something</li>
+</ul>
 
 {% endblock %}

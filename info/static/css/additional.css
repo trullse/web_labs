@@ -1,0 +1,8 @@
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: "\25D5";
+    margin-right: 5px;
+}
