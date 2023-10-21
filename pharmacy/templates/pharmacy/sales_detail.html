@@ -3,6 +3,7 @@
 
 {% block styles %}
 <link rel='stylesheet' href="{% static 'css/lists.css' %}">
+<link rel='stylesheet' href="{% static 'css/sale_detail.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -10,11 +11,28 @@
 <p>Pharmacy department: {{ sale.ph_department }}</p>
 <h3>Medicines:</h3>
 {% if sale.medicines.all %}
-<ul>
+<table class="medicine-table">
+    <thead>
+        <td>Medicine</td>
+        <td>Price</td>
+    </thead>
+    <tbody>
     {% for medicine in sale.medicines.all %}
-    <li><a href="{% url 'pharmacy:medicine_detail' medicine.id %}">{{ medicine.name }} - {{ medicine.price }}</a></li>
+        <tr>
+            <td>
+                <a href="{% url 'pharmacy:medicine_detail' medicine.id %}">{{ medicine.name }}</a>
+            </td>
+            <td>
+                {{ medicine.price }}
+            </td>
+        </tr>
     {% endfor %}
-</ul>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
 {% else %}
 <p>No medicines are available.</p>
 {% endif %}

@@ -49,10 +49,21 @@
     z-index: 2;
 }
 
-#about-navigation {
-    position: sticky;
-    top: 100px;
-    left: 100px;
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    #about-navigation {
+        position: sticky;
+        top: 100px;
+        left: 100px;
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 4000px) {
+    #about-navigation {
+        position: sticky;
+        top: 100px;
+        left: 100px;
+    }
 }
 
 td.about-table {

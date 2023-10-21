@@ -10,6 +10,7 @@
 {% block content %}
 <h1>Welcome to <span id="company-name">HealthHub</span>!</h1>
 
+<div id="ad-area">
     <figure id="ad-block">
         <a href="https://sinupret.com/">
             <img src="{% static 'info/images/ad/ad_wide.jpg' %}" alt="Advertisement" width="1000"
@@ -20,6 +21,7 @@
             <figcaption>Advertisement</figcaption>
         </a>
     </figure>
+</div>
 
 {% if last_article != null %}
 <h2>Latest article:</h2>
