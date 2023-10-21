@@ -41,6 +41,7 @@ body {
 	vertical-align: top;
 	width: 25%;
 	padding-left: 5%;
+	
 }
 
 /* Fonts */
@@ -258,6 +259,9 @@ a.button {
 	padding: 20px;
 	border-radius: 20px;
 	background-color: green;
+	margin-bottom: 20px;
+	display: inline-block;
+	margin: 20px 0px;
 }
 
 a.button:hover {
