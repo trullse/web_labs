@@ -250,3 +250,17 @@ img {
 figure {
 	margin: 0px;
 }
+
+a.button {
+	color: white;
+	font-family: 'Lato', 'Roboto', sans-serif;
+    font-size: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: green;
+}
+
+a.button:hover {
+	text-decoration: none;
+	background-color: rgb(39, 180, 39);
+}

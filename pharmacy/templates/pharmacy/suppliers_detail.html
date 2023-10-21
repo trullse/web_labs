@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/lists.css' %}">
+{% endblock %}
 
 {% block content %}
 <h1>{{ supplier.name }}</h1>
