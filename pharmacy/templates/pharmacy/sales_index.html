@@ -1,8 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/lists.css' %}">
+{% endblock %}
 
 {% block content %}
+<h1>Sales management</h1>
 {% if perms.pharmacy.add_sale %}
-<h3><a href="{% url 'pharmacy:sale_add' %}">Make a sell</a></h3>
+<h3><a href="{% url 'pharmacy:sale_add' %}" class="button">Make a sell</a></h3>
 {% endif %}
 {% if sales_list %}
 <ul>

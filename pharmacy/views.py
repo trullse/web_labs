@@ -119,7 +119,7 @@ class SuppliersDetailView(PermissionRequiredMixin, generic.DetailView):
 class SaleCreate(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'pharmacy.add_sale'
     model = Sale
-    fields = '__all__'
+    fields = ('ph_department', 'medicines')
     initial = {'date': datetime.now(), }
     template_name = "pharmacy/sales_add.html"
     success_url = reverse_lazy('pharmacy:sale_index')

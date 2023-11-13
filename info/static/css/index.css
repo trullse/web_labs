@@ -1,0 +1,84 @@
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .partners {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 4000px) {
+    .partners {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 0px;
+    }
+}
+
+div.partner-background {
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+#company-name {
+    font-kerning: normal;
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+@keyframes ad-animation {
+    0%   {scale: 1.0}
+    50%  {scale: 1.05}
+    100% {scale: 1.0}
+  }
+
+#ad-area {
+    display: flex;
+    justify-content: center;
+}
+
+#ad-block {
+    display: flex;
+    justify-content: center;
+    animation-name: ad-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 50px;
+}
+
+#ad-block img {
+    border-radius: 0%;
+    width: 80vw;
+}
+
+#ad-block:hover {
+    transform: scale(1.05);
+}
+
+#article-last {
+    position: static;
+    width: 800px;
+    max-width: 80vw;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5%;
+    padding: 10px 30px;
+    margin: 30px 0px;
+}
+
+.article-text-brief {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#article-last img {
+    width: 100%;
+    height: auto;
+}

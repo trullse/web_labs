@@ -1,0 +1,16 @@
+details {
+    margin: 10px 0px;
+}
+
+details > summary {
+    list-style: none;
+    padding: 20px 20px;
+    background-color: rgb(137, 204, 135);
+    display: flex;
+    justify-content: space-between;
+}
+
+details > p {
+    padding: 20px 20px;
+    margin: 0px;
+}

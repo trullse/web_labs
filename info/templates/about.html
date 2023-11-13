@@ -1,28 +1,34 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}About{% endblock %}
 
-{% block content %}
-{% load static %}
-<aside>
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block navigation %}
+<aside id="about-navigation">
     <nav>
         <h2>Content</h2>
         <ul>
             <li><a href="#about">About us</a></li>
+            <li><a href="#history">Our history</a></li>
             <li><a href="#company">Company details</a></li>
             <li><a href="#certificate">Certificate</a></li>
             <li><a href="#privacy">Privacy policy</a></li>
         </ul>
     </nav>
 </aside>
-
+{% endblock %}
+{% block content %}
+<h1 id="about">About us</h1>
 <video height="480" 
        src="{% static 'info/videos/HealthHub_video.mp4' %}"
        autoplay controls preload="none" muted>
   Video cannot be displayed
 </video>
-<section itemscope itemtype="http://schema.org/Organization" id="about">
-    <h1 itemprop="name">HealthHub Pharmacy</h1>
+<section itemscope itemtype="http://schema.org/Organization">
     <p itemprop="description">
         Welcome to HealthHub, your trusted source for all your healthcare needs. We are dedicated to 
         providing the highest quality pharmaceutical services, health products, and professional guidance 
@@ -47,41 +53,85 @@
         on our shelves meets stringent quality standards.
     </p>
     <br>
-    <h1>Our history</h1>
-    <h2>Our Journey Begins</h2>
-    <p>
-        In the year 2008, a vision became a reality as HealthHub Pharmacy opened its doors for the first time. 
-        Founded by a team of dedicated healthcare professionals, our journey began with a simple yet profound goal
-        - to provide our community with the highest standard of healthcare and wellness support.
-    </p>
-    <h2>A Decade of Dedication</h2>
-    <p>Over the past decade, HealthHub Pharmacy has grown and evolved, guided by our unwavering commitment to your 
-        health and well-being. We have been honored to serve the wonderful people of Belarus and beyond, 
-        providing access to quality medications and expert healthcare advice.
-    </p>
-    <h2>Innovation and Excellence</h2>
-    <p>Throughout the years, we've embraced innovation in the pharmaceutical field. From state-of-the-art prescription 
-        management systems to our online services, we've always aimed to make your healthcare experience as convenient 
-        and efficient as possible.
-    </p>
-    <h2>A Community of Care</h2>
-    <p>
-        At HealthHub Pharmacy, we believe in more than just prescriptions; we believe in building a community of care. 
-        We've actively engaged with our neighbors through health education programs, vaccination clinics, and support 
-        for local health initiatives.
-    </p>
-    <h2>Adapting to Challenges</h2>
-    <p>
-        The year 2020 presented unprecedented challenges with the COVID-19 pandemic. HealthHub Pharmacy responded by 
-        ensuring the safety of our customers and staff. We offered curbside pickup, telehealth consultations, and 
-        vital information to keep our community safe and informed.
-    </p>
-    <h2>Looking Forward</h2>
-    <p>
-        As we move forward, we remain committed to our founding principles. We strive to continue being your trusted 
-        healthcare partner, delivering personalized care, expert advice, and high-quality products. The journey that 
-        began in 2008 continues, and we're excited about the future.
-    </p>
+    <h1 id="history">Our history</h1>
+    <table>
+        <tr>
+            <td class="about-table medium-text bold-text color-company">
+                2008
+            </td>
+            <td>
+                <h2>Our Journey Begins</h2>
+                <p>
+                    In the year 2008, a vision became a reality as HealthHub Pharmacy opened its doors for the first time. 
+                    Founded by a team of dedicated healthcare professionals, our journey began with a simple yet profound goal
+                    - to provide our community with the highest standard of healthcare and wellness support.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="about-table medium-text bold-text color-company">
+                2010
+            </td>
+            <td>
+                <h2>A Decade of Dedication</h2>
+                <p>Over the past decade, HealthHub Pharmacy has grown and evolved, guided by our unwavering commitment to your 
+                    health and well-being. We have been honored to serve the wonderful people of Belarus and beyond, 
+                    providing access to quality medications and expert healthcare advice.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="about-table medium-text bold-text color-company">
+                2012
+            </td>
+            <td>
+                <h2>Innovation and Excellence</h2>
+                <p>Throughout the years, we've embraced innovation in the pharmaceutical field. From state-of-the-art prescription 
+                    management systems to our online services, we've always aimed to make your healthcare experience as convenient 
+                    and efficient as possible.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="about-table medium-text bold-text color-company">
+                2018
+            </td>
+            <td>
+                <h2>A Community of Care</h2>
+                <p>
+                    At HealthHub Pharmacy, we believe in more than just prescriptions; we believe in building a community of care. 
+                    We've actively engaged with our neighbors through health education programs, vaccination clinics, and support 
+                    for local health initiatives.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="about-table medium-text bold-text color-company">
+                2020
+            </td>
+            <td>
+                <h2>Adapting to Challenges</h2>
+                <p>
+                    The year 2020 presented unprecedented challenges with the COVID-19 pandemic. HealthHub Pharmacy responded by 
+                    ensuring the safety of our customers and staff. We offered curbside pickup, telehealth consultations, and 
+                    vital information to keep our community safe and informed.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="medium-text bold-text color-company">
+                2023
+            </td>
+            <td>
+                <h2>Looking Forward</h2>
+                <p>
+                    As we move forward, we remain committed to our founding principles. We strive to continue being your trusted 
+                    healthcare partner, delivering personalized care, expert advice, and high-quality products. The journey that 
+                    began in 2008 continues, and we're excited about the future.
+                </p>
+            </td>
+        </tr>
+    </table>
     <p>
         Thank you for choosing HealthHub Pharmacy as your healthcare destination. We're here to support you on your 
         path to better health.
@@ -92,20 +142,20 @@
     <h1>Pharmacy details</h1>
     <p itemscope itemtype="http://schema.org/Pharmacy">
         <p>
-            Business Name: <p itemprop="name">HealthHub Pharmacy</p>
+            Business Name: <span itemprop="name" class="italic-text">HealthHub Pharmacy</p>
         </p>
         <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             Address:
-            <p itemprop="streetAddress">Nezalezhnasti 56</p>,
-            <p itemprop="addressLocality">Minsk</p>,
-            <p itemprop="addressRegion">Belarus</p>
-            ZIP-code: <p itemprop="postalCode"></p>213633</p>
+            <span itemprop="streetAddress" class="italic-text">Nezalezhnasti 56</span>,
+            <span itemprop="addressLocality" class="italic-text">Minsk</span>,
+            <span itemprop="addressRegion" class="italic-text">Belarus</span>
+            ZIP-code: <span itemprop="postalCode" class="italic-text">213633</span></p>
         </p>
-        <p itemprop="telephone">
-            Phone: +375 29 567-34-12
+        <p>
+            Phone: <span itemprop="telephone" class="italic-text">+375 29 567-34-12</span>
         </p>
-        <p itemprop="email">
-            Email: info@healthhubpharmacy.com
+        <p>
+            Email: <span itemprop="email" class="italic-text">pharmacy@healthhub.com</span>
         </p>
         <p>
             Hours of Operation:
@@ -116,16 +166,22 @@
         </p>
     </p>
 </section>
-<br>
+<h1 class="center-placed">Certificate</h1>
 <section id="certificate">
-    <h3>Ministry of Health of the Republic of Belarus</h3>
+    <h3 class="medium-text">Ministry of Health of the Republic of Belarus</h3>
     <h2 itemprop="license">Pharmacy License</h2>
-    № 123873457
-    <br><br><br><br><br>
-    The license is granted to a limited liability company "HealthHub Pharmacy"
+    <span class="italic-text medium-text">№ 123873457</span>
+    <span class="medium-text">The license is granted to a limited liability company "HealthHub Pharmacy"</span>
+    <div id="logo-box">
+        <img src="{% static 'images/HealthHub.png' %}" width="400px" id="logo">
+    </div>
 </section>
 <br>
-<section id="privacy">
-    <a href="{% url 'info:privacy' %}">Privacy policy</a>
+<h1 id="privacy">Privacy policy</h1>
+<section>
+    <p class="margin-bottom-20">
+        <a href="{% url 'info:privacy' %}">Click here to read privacy policy</a>
+    </p>
 </section>
+
 {% endblock %}

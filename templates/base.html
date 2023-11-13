@@ -9,13 +9,16 @@
     <meta name="keywords" content="Pharmacy, Drugs, Medicines"/>
     <meta name="description" content="HealthHub Pharmacy web-site. Medicines, drugs, qualificated help, coupons and more."/>
     <meta name="author" content="Aliaksei Leanenka"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link rel='stylesheet' href="{% static 'css/base.css' %}">
+    {% block styles %}{% endblock %}
 
 </head>
 
     <body>
         <header>
-            <nav>
+            <nav id="navigation-top">
                 <a href="{% url 'info:index' %}">
                     <img src="{% static 'images/HealthHub.png' %}" alt="HealthHub logo" height="50">
                 </a>&nbsp;&nbsp;&nbsp;
@@ -47,7 +50,19 @@
             </nav>
         </header>
         <main>
-            {% block content %}{% endblock %}
+            <div id="content-wrap">
+                <table>
+                    <td id="navigation-side">
+                        {% block navigation %}{% endblock %}
+                    </td>
+                    <td>
+                        {% block content %}{% endblock %}
+                    </td>
+                </table>
+            </div>
         </main>
+        <footer>
+           <p>&copy; 2023 HealthHub Pharmacy. All rights reserved</p>
+        </footer>
     </body>
 </html>

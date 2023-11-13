@@ -1,9 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Additional{% endblock %}
 
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/additional.css' %}">
+{% endblock %}
+
 {% block content %}
-{% load static %}
 <!-- 1. The <iframe> (and video player) will replace this <p> tag. -->
 <p id="player"></p>
 
@@ -65,7 +69,8 @@
 <dfn title="BSUIR">apple</dfn> is a university in Belarus.
 
 <h2>Quote</h2>
-<q>Some quote.</q>
+<q class="quote" lang="en">Some quote.</q><br>
+<q class="quote" lang="ru">Какая-то цитата.</q>
 
 <h2>Line-movement</h2>
 <p>
@@ -101,5 +106,11 @@
 
 <h2>IFrame</h2>
 <iframe src="https://bsuir.by" title="metadata"></iframe>
+
+<ul>
+    <li>Something</li>
+    <li>Something</li>
+    <li>Something</li>
+</ul>
 
 {% endblock %}

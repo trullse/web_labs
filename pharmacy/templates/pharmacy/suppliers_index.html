@@ -1,6 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/lists.css' %}">
+{% endblock %}
 
 {% block content %}
+<h1>Suppliers</h1>
 {% if suppliers_list %}
 <ul>
     {% for supplier in suppliers_list %}

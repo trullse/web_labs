@@ -61,7 +61,7 @@ class PharmacyDepartment(models.Model):
 
 
 class Sale(models.Model):
-    date = models.DateTimeField("Date sold")
+    date = models.DateTimeField("Publish date", default=timezone.now)
     ph_department = models.ForeignKey(PharmacyDepartment, on_delete=models.CASCADE)
     medicines = models.ManyToManyField(Medicine)
 

@@ -1,9 +1,14 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/news.css' %}">
+{% endblock %}
 
 {% block content %}
 <article itemprop="article" itemscope itemtype="https://schema.org/NewsArticle">
     <h2 itemprop="headline">{{ article.title }}</h2>
     <img itemprop="image" src="{{ article.img_source.url }}" height="600" alt="{{ article.title }}">
-    <p itemprop="articleBody">{{ article.content }}</p>
+    <p itemprop="articleBody" class="column-layout">{{ article.content }}</p>
 </article>
 {% endblock %}

@@ -1,0 +1,77 @@
+#logo-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#logo {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.2);
+}
+
+#certificate {
+    border: 50px solid; 
+    border-image: url('../info/images/certificate.jpg') 30 round;
+    background: url('../info/images/certificate_background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 600px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#certificate > h2 {
+    background-color: #2AA5A0;
+    background-image: linear-gradient(90deg, #45df4d, #ff2929);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    z-index: 2;
+}
+
+#certificate > h3 {
+    z-index: 2;
+}
+
+#certificate > span {
+    z-index: 2;
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    #about-navigation {
+        position: sticky;
+        top: 100px;
+        left: 100px;
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 4000px) {
+    #about-navigation {
+        position: sticky;
+        top: 100px;
+        left: 100px;
+    }
+}
+
+td.about-table {
+	padding: 0px 20px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
