@@ -7,7 +7,13 @@
 <link rel='stylesheet' href="{% static 'css/about.css' %}">
 {% endblock %}
 
-{% block navigation %}
+{% block content %}
+<h1 id="about">About us</h1>
+<video height="480" 
+       src="{% static 'info/videos/HealthHub_video.mp4' %}"
+       autoplay controls preload="none" muted>
+  Video cannot be displayed
+</video>
 <aside id="about-navigation">
     <nav>
         <h2>Content</h2>
@@ -20,14 +26,6 @@
         </ul>
     </nav>
 </aside>
-{% endblock %}
-{% block content %}
-<h1 id="about">About us</h1>
-<video height="480" 
-       src="{% static 'info/videos/HealthHub_video.mp4' %}"
-       autoplay controls preload="none" muted>
-  Video cannot be displayed
-</video>
 <section itemscope itemtype="http://schema.org/Organization">
     <p itemprop="description">
         Welcome to HealthHub, your trusted source for all your healthcare needs. We are dedicated to 

@@ -8,6 +8,14 @@
 {% endblock %}
 
 {% block content %}
+<section id="top">
+    <img src="{% static 'info/images/scrollarea/pharmacy.png' %}" id="bg" />
+    <h2 id="text">HealthHub</h2>
+    <img src="{% static 'info/images/scrollarea/girl.png' %}" id="woman" />
+    <img src="{% static 'info/images/scrollarea/doorleft_new.png' %}" id="door_left" />
+    <img src="{% static 'info/images/scrollarea/doorright_new.png' %}" id="door_right" />
+</section>
+
 <h1>Welcome to <span id="company-name">HealthHub</span>!</h1>
 
 <div id="ad-area">
@@ -64,5 +72,7 @@
         </div>
     </a>
 </div>
+
+<script src="{% static 'js/index.js' %}"></script>
 
 {% endblock %}

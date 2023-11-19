@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel='stylesheet' href="{% static 'css/lists.css' %}">
+{% endblock %}
 
 {% block content %}
 <p itemscope itemtype="https://schema.org/ItemList"></p>
@@ -6,9 +11,9 @@
     {% if medicinecategory.medicine_set.all %}
     <ul>
         {% for medicine in medicinecategory.medicine_set.all %}
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/MedicalBusiness"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/MedicalBusiness">
             <a href="{% url 'pharmacy:medicine_detail' medicine.id %}">
-                <p itemprop="name">{{ medicine.name }}</p>
+                <span itemprop="name">{{ medicine.name }}</span>
             </a>
         </li>
         {% endfor %}

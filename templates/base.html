@@ -51,14 +51,7 @@
         </header>
         <main>
             <div id="content-wrap">
-                <table>
-                    <td id="navigation-side">
-                        {% block navigation %}{% endblock %}
-                    </td>
-                    <td>
-                        {% block content %}{% endblock %}
-                    </td>
-                </table>
+                {% block content %}{% endblock %}
             </div>
         </main>
         <footer>

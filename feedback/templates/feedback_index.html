@@ -7,13 +7,10 @@
 <link rel='stylesheet' href="{% static 'css/feedback.css' %}">
 {% endblock %}
 
-{% block navigation %}
-<a href="{% url 'feedback:feedback_add' %}" class="button">Add feedback</a>
-{% endblock %}
-
 {% block content %}
+<a href="{% url 'feedback:feedback_add' %}" class="button">Add feedback</a>
 {% if feedback_list %}
-<ul>
+<ul class="nopadding">
     {% for feedback in feedback_list %}
     <div class="feedback-block">
         <h1>{{ feedback.name }}</h1>
