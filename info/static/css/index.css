@@ -49,12 +49,19 @@ div.partner-background {
     animation-name: ad-animation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    width: 50px;
+    width: 100%;
+}
+
+#ad-block a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #ad-block img {
     border-radius: 0%;
-    width: 80vw;
+    width: 80%;
 }
 
 #ad-block:hover {
