@@ -6,3 +6,25 @@ ul li::before {
     content: "\25D5";
     margin-right: 5px;
 }
+
+#change_style {
+    margin: 20px;
+    cursor: pointer;
+}
+
+#change_container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#change_container button {
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+	border-radius: 20px;
+    background-color: green;
+    color: white;
+    min-width: 200px;
+    outline: none;
+}

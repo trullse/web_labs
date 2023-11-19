@@ -3,6 +3,7 @@
 
 {% block styles %}
 <link rel='stylesheet' href="{% static 'css/forms.css' %}">
+<link rel='stylesheet' href="{% static 'css/sales_add.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -16,4 +17,17 @@
     <input type="submit" value="Submit" />
 
 </form>
+
+<form id="couponForm">
+    <label for="couponCode">Enter Coupon Code:</label>
+    <input type="text" id="couponCode" name="couponCode" pattern="\d{4}" title="Coupon code should consist of 4 digits" required>
+    <button type="button" onclick="validateCoupon()">Validate Coupon</button>
+</form>
+
+<div id="price-area">
+    <h2>Total price:&nbsp</h2>
+    <h2 id="total-price">0</h2>
+</div>
+
+<script src="{% static 'js/coupons.js' %}"></script>
 {% endblock %}

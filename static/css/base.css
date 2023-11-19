@@ -191,7 +191,7 @@ body {
 	margin-bottom: 20px;
 }
 
-p {
+p, label {
     font-family: 'Lato', 'Roboto', sans-serif;
     font-size: 20px;
 }

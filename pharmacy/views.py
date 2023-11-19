@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse, reverse_lazy
 from django.views import generic
+from django import forms
 
 from .models import MedicineCategory, Medicine, Supplier, Sale
 from .helpers import plot_last_days_sales
@@ -120,6 +121,9 @@ class SaleCreate(PermissionRequiredMixin, generic.CreateView):
     permission_required = 'pharmacy.add_sale'
     model = Sale
     fields = ('ph_department', 'medicines')
+    widgets = {
+            'medicines': forms.Select(attrs={'class': 'select-input'}),
+        }
     initial = {'date': datetime.now(), }
     template_name = "pharmacy/sales_add.html"
     success_url = reverse_lazy('pharmacy:sale_index')

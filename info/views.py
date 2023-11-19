@@ -23,23 +23,23 @@ class IndexView(generic.TemplateView):
         return context
     
 
-class AdditionalView(generic.DetailView):
+class AdditionalView(generic.TemplateView): # DetailView
     template_name = "additional.html"
     context_object_name = "additional"
     joke_info = {}
     model = joke_info
 
-    def get(self, request, *args, **kwargs):
-        logger.info('In additional view')
+    # def get(self, request, *args, **kwargs):
+    #     logger.info('In additional view')
 
-        url = 'https://official-joke-api.appspot.com/jokes/programming/random'
-        joke_info = requests.get(url).json()
-        self.joke_info = joke_info
-        logger.debug(joke_info)
-        context = get_ip_request()
-        logger.debug(f'context: {context}')
+    #     url = 'https://official-joke-api.appspot.com/jokes/programming/random'
+    #     joke_info = requests.get(url).json()
+    #     self.joke_info = joke_info
+    #     logger.debug(joke_info)
+    #     context = get_ip_request()
+    #     logger.debug(f'context: {context}')
 
-        return render(request, self.template_name, context)
+    #     return render(request, self.template_name, context)
 
 
 def get_ip_request():

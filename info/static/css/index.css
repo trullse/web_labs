@@ -44,12 +44,14 @@ div.partner-background {
 }
 
 #ad-block {
-    display: flex;
+    display: block;
     justify-content: center;
     animation-name: ad-animation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    width: 100%;
+    width: 100%; /* Замените на ширину вашего баннера */
+    height: auto; /* Замените на высоту вашего баннера */
+    overflow: hidden;
 }
 
 #ad-block a {
@@ -59,10 +61,47 @@ div.partner-background {
     align-items: center;
 }
 
-#ad-block img {
+/* #ad-block img {
     border-radius: 0%;
     width: 80%;
+    position: absolute;
+    opacity: 0; /* Скрыть все изображения, кроме первого */
+    /* transition: opacity 0.5s ease-in-out;
 }
+
+.ad-img:first-child {
+    opacity: 1; /* Показать первое изображение */
+    /*} */
+
+.ad-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    animation-name: ad-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-bottom: 50px;
+}
+  
+.ad-page {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ad-page img {
+    width: 100%;
+    height: auto;
+}
+  
+.ad-img:first-child {
+    opacity: 1;
+}
+  
 
 #ad-block:hover {
     transform: scale(1.05);
@@ -131,3 +170,29 @@ section img{
     color:rgb(255, 255, 255);
     font-size: 10rem;
 }
+
+/* Setting area */
+
+#setting-area {
+    display: flex;
+    align-items: center;
+}
+
+#setting-popup {
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.rotate-on-click {
+    transition: transform 0.5s ease; /* Добавление плавного перехода для анимации */
+}
+  
+.rotate-on-click.rotated {
+    transform: rotate(180deg); /* Поворот на 360 градусов */
+}
+
+.rotate-on-click:hover {
+    cursor: pointer;
+}
+  

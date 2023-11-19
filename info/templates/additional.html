@@ -36,7 +36,7 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        event.target.playVideo();
+        //event.target.playVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -112,5 +112,13 @@
     <li>Something</li>
     <li>Something</li>
 </ul>
+
+<form>
+    <label for="change_style">Use custom styles</label>
+    <input type="checkbox" id="change_style">
+</form>
+<div id="change_container"></div>
+
+<script src="{% static 'js/change-styles.js' %}"></script>
 
 {% endblock %}
