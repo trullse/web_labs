@@ -28,3 +28,9 @@ ul li::before {
     min-width: 200px;
     outline: none;
 }
+
+#timer {
+    font-size: 36px;
+    display: flex;
+    flex-direction: row;
+}

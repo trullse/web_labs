@@ -5,6 +5,7 @@
 
 {% block styles %}
 <link rel='stylesheet' href="{% static 'css/additional.css' %}">
+<link rel='stylesheet' href="{% static 'css/forms.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -53,8 +54,16 @@
         player.stopVideo();
     }
 </script>
-<h2>{{ setup }}</h2>
-<h3>{{ punchline }}</h3>
+
+<h2>Hour timer</h2>
+<div id="timer">
+    <div id="timer-hours"></div>:
+    <div id="timer-minutes"></div>:
+    <div id="timer-seconds"></div>
+</div>
+
+<!-- <h2>{{ setup }}</h2>
+<h3>{{ punchline }}</h3> -->
 
 <h2>Listing</h2>
 <code>
@@ -120,5 +129,6 @@
 <div id="change_container"></div>
 
 <script src="{% static 'js/change-styles.js' %}"></script>
+<script src="{% static 'js/timer.js' %}"></script>
 
 {% endblock %}
