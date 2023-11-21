@@ -34,3 +34,23 @@ ul li::before {
     display: flex;
     flex-direction: row;
 }
+
+#numTable {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: fit-content;
+}
+
+#numTable th, #numTable td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+td.selected {
+    background-color: aqua;
+}
+
+td.selected-even {
+    background-color: rgb(29, 255, 180);
+}
