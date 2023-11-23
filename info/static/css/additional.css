@@ -54,3 +54,18 @@ td.selected {
 td.selected-even {
     background-color: rgb(29, 255, 180);
 }
+
+/* Classes */
+
+#classes-table {
+    width: 100%;
+    height: 80vh;
+}
+
+#classes-output {
+    border: 1px solid black;
+    margin: 10px;
+    height: 100%;
+    width: 50%;
+    overflow-y: auto;
+}
